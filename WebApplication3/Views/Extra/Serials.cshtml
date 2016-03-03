@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<WebApplication3.Models.Serial> 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Сериалы</title>
+    <style>
+        body {
+            background: #FDF6FE;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center"><b><i><font color="#DC6A9E" face="Courier" size="15">Мои любимые сериалы:</font></i></b></h1>
+<div>
+    <ul>
+        @foreach (var serial in Model)
+        {
+            <font COLOR="#4B4B72" FACE="Courier" size="3"><i>
+                    <li>
+                        <BR><b>Название сериала: @serial.Name</b>
+                        <BR><b>Описание:</b> @serial.About
+                        <BR><b>Начало показа:</b> @serial.StartTime
+                        <BR><IMG SRC="@serial.Photo">
+                    </li>
+            </i></font>
+        }
+    </ul>
+</div>
+</body>
+</html>

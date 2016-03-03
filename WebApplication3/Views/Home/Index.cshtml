@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Домашняя страница</title>
+    <style>
+        body {
+            background:#FDF6FE;
+        }
+    </style>
+</head>
+<body link="#BC60D2" ALINK="#45CBD9" VLINK="#2D557C">
+<h1 align="center"><b><i><font color="#DC6A9E" face ="Courier" size ="20">Сайт Семакиной Ольги</font></i></b></h1>
+    <div>
+        <p align="center">
+            <font COLOR="#53BCEE" FACE="Courier" size="5">
+                <i><b>
+                 На данном сайте хранится некая информация обо мне, выберите один из пунктов ниже для её прочтения:
+                 </b></i>
+            </font>
+        </p>
+        <font COLOR="#53BCEE" FACE="Courier" size="5"><i>
+            <ul>
+                <li> @Html.ActionLink("Мои хобби", "Hobbies", "Home")</li>
+                <li> @Html.ActionLink("Мои любимые сериалы", "Serials", "Extra")</li>
+                <li> @Html.ActionLink("Немного информации обо мне", "Biography", "Extra")</li>
+            </ul>
+        </i></font>
+    </div>
+</body>
+</html>

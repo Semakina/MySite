@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<WebApplication3.Models.Hobby> 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Хобби</title>
+    <style>
+        body {
+            background: #FDF6FE;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center"><b><i><font color="#DC6A9E" face="Courier" size="15">Мои хобби</font></i></b></h1>
+        <div>
+            <ul>
+                @foreach (var hobby in Model)
+                {
+                    <li>
+                        <font COLOR="#4B4B72" FACE="Courier" size="3"><i>Я люблю @hobby.HobbyName.
+                        Я начала увлекаться этим в @hobby.StartYear г. </i></font>
+                    </li>
+                }
+            </ul>
+        </div>
+</body>
+</html>
